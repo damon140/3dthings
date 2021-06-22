@@ -1,7 +1,7 @@
 
-$fn=300;
+$fn=110;
 
-footRodDiameter=9.25;
+footRodDiameter=9.95;
 
 module innerChannel() {
   // make a cylinder inner
@@ -12,10 +12,10 @@ module innerChannel() {
       center=true);
 
     // half sphere for printing
-    translate([0,0,7])
+    translate([0,0,6.55])
     rotate([0,90,0])
     difference() {
-      rad=4.6;
+      rad=footRodDiameter/2;
      sphere(r=rad);
       translate([rad*2.5,0,0])
       cube(rad*5, center=true);
@@ -25,14 +25,13 @@ module innerChannel() {
 
 rotate([180,0,0])
 union() {
-
   // make a cut sphere
-  translate([0,0, -0.6])
+  translate([0,0, -0.4])
   difference() {
-    sphere(r=10.8);
+    sphere(r=11.2);
   
-    translate([0,0,-3.5])
-    cube(size=23.25, center=true);
+    translate([0,0,-3.6])
+    cube(size=23.0, center=true);
   }
 
   difference() {

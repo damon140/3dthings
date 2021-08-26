@@ -1,7 +1,7 @@
 
 
 
-frameThickness=18.45; // mm
+frameThickness=17.7; // mm
 clipThickness=1.5; // mm
 clipWidth=10; // mm
 clipHeight=12; // mm

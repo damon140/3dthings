@@ -27,13 +27,13 @@ module cutouts() {
     -1, clipThickness])
   cube([wirespace, clipWidth+2, clipHeight - clipThickness * 3]);
   
-  // split space
-  translate([frameThickness + 1 * clipThickness,
-    -1, clipHeight - clipThickness])
+  // top cutoff
+  translate([frameThickness + 1 * clipThickness, -1, clipHeight - clipThickness])
   cube([8, clipWidth+2, clipThickness * 2 + 1]);
     
-  //
-  
+  // split space
+  translate([frameThickness + 1 * clipThickness, -1, clipHeight - 4 * clipThickness])
+  cube([clipThickness, clipWidth+2, clipThickness * 2]);  
   
 }
 

@@ -3,7 +3,7 @@
 // wire is 7.5mm x 4.5mm
 
 wireThickness=7.5; // mm
-wireHeight=4.5; // mm
+wireHeight=4.9; // mm
 
 
 frameThickness=17.7; // mm
@@ -14,9 +14,10 @@ wirespace=3; // mm
 
 // block
 module block() {
-  blockLength=(4*clipThickness)
+  blockLength=(clipThickness)
     + frameThickness
-    + wirespace;
+    + wirespace
+    + wireHeight - 0.11;
   cube([blockLength, clipWidth, clipHeight + clipThickness]);
 }
 

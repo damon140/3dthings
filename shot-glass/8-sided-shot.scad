@@ -1,7 +1,7 @@
 
 
 
-
+// shot glass
 difference() {
 
 cylinder($fn=6, h=28, r1=15, r2=18, center=false);

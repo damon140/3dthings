@@ -20,7 +20,7 @@ difference() {
 
 
   // text
-  translate([11.81,0,5])
+  translate([11.81,0.3,5])
   rotate([90,0,90])
     linear_extrude(5)
   // install via admin mode explorer to get it into c:\windows\fonts

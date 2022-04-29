@@ -5,44 +5,35 @@
 
 module needle() {
   cylinder($fn=10, h=40, d=1); 
-  translate([0, 0, 30])
+  translate([0, 0, 40])
   cylinder($fn=10, h=30, d=3);
 }
 
 
-for(i = [1 : 8])
-  rotate(i * 45)
-    translate([0, 20])
-      needle();
+module needles() {
+  for(i = [1 : 8])
+    rotate(i * 45)
+      translate([0, 13])
+        needle();
 
-        
-/*
-diameter = 34.0;
-linear_extrude(10)
-    difference() {
-        circle(d = diameter + 10);
-
-        for(i = [1 : 8])
-           rotate(i * 40)
-                translate([0, diameter / 2])
-                    circle(d = 6);
-    }
-*/
-
+  for(i = [1 : 3])
+    rotate(i * 120)
+      translate([0, 5])
+        needle();
+}
 
 
 // main body
+translate([0, 0, 35])
 difference() {
 
   cylinder($fn=6, h=50, d=40, center=false);
 
-  translate([0, 0, 2])
+  translate([0, 0, 35])
   cylinder($fn=6, h=50, d=35, center=false);
-    
-  
+
+
+  needles();     
 }
-
-
-
 
 

@@ -1,8 +1,5 @@
 
 
-// 0.6 3mm
-// 40 + 30
-
 module needle() {
   cylinder($fn=10, h=40, d=1); 
   translate([0, 0, 40])
@@ -22,18 +19,14 @@ module needles() {
         needle();
 }
 
-
-// main body
-translate([0, 0, 35])
 difference() {
 
+  translate([0, 0, 35])
   cylinder($fn=6, h=50, d=40, center=false);
 
-  translate([0, 0, 35])
+  translate([0, 0, 69])
   cylinder($fn=6, h=50, d=35, center=false);
 
-
-  needles();     
+  needles();
 }
-
 

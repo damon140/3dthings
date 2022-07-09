@@ -27,6 +27,18 @@ difference() {
   translate([0, 0, 69])
   cylinder($fn=6, h=50, d=35, center=false);
 
+
   needles();
+    
+    
+  // TODO: screw hole
+}
+
+
+
+// top
+translate([0, -50, 50])
+difference() {
+  cylinder($fn=6, h=4, d=35, center=false);
 }
 

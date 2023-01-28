@@ -1,12 +1,15 @@
 
 difference(){
-  translate([0, 0, 10])
-  rotate([0, 90, 0])
-  cube([30, 30, 30]);
+  translate([0, -2, -12])
+  cube([26, 34, 34]);
 
   translate([-10, 15, -10])
   rotate([0, 90, 0])
-  cylinder(h=50, r=13);
+  // 28.6 / 2 = 14.3
+  cylinder(h=50, r=14.3);
+    
+  translate([-2, 12.5, 4])
+  cube([60, 5, 5]);    
 }
 
 // short tab

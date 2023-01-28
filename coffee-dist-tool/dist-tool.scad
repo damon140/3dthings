@@ -37,6 +37,17 @@ difference() {
 */
     
   needles();
+    
+    
+  // TODO: screw hole
+}
+
+
+
+// top
+translate([0, -50, 50])
+difference() {
+  cylinder($fn=6, h=4, d=35, center=false);
 }
 
 // lidy thingy

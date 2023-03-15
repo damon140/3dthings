@@ -15,12 +15,12 @@ difference(){
     // cable tie bit
     translate([27, 15, -10])
     rotate([0, 90, 0])
-    cylinder(h=1, r=18);
+    cylinder(h=1, r=18.4);
 
     // cable tie bit
-    translate([32.4, 15, -10])
+    translate([33, 15, -10])
     rotate([0, 90, 0])
-    cylinder(h=1, r=18);
+    cylinder(h=1, r=18.4);
       
     // key thing
     translate([3, 7, 0])

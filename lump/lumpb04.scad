@@ -1,18 +1,24 @@
 
 
-
 difference() {
   union() {
 
     minkowski() {
-      cube([70, 95, 5],center=true);
-      translate([])
-      cylinder(h=1, r=3);
+      difference(){
+        cube([65, 98, 4],center=true);
+          
+        // left side loading channel
+        translate([-45, 7, 0])
+          
+        // bevelled edging for main plait
+        cube([55, 60, 35], center=true);          
+      }
+      cylinder(h=1, r=7, r2 = 5);
     }
 
-    translate([0, -27, -8])
+    translate([0, -31, -10])
     rotate([15, 0, 0])
-    cube([45, 35, 35], center=true);
+    cube([50, 35, 35], center=true);
     
     /*
     translate([0, 27, -8])
@@ -20,8 +26,8 @@ difference() {
     cube([30, 35, 35], center=true);
     */
 
-    translate([-20, 24, 0])
-    cube([45, 15, 13]);
+    translate([0, 40, 5])
+    cube([50, 15, 13], center=true);
   };
 
   // cut bottom off   
@@ -36,9 +42,10 @@ difference() {
   translate([25, -20, 0.75])
   rotate([180, 0, 270])
   linear_extrude(height=2)
-  text("v-b0.2", 6, "Arial");
+  text("v-b0.3", 7, "Arial");
 
-  // TODO: add a loading channel
+
+  // TODO: add a first loading channel
   // translate([-20, 24, 0])
   // rotate([15, 45, 0])
   // cube([45, 35, 35], center=true);

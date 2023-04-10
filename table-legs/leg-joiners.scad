@@ -1,6 +1,11 @@
 
 
+// Weird leg notes
+// width 44
+// height 33.5
 
+// can import PNG with surface
+// surface(file=logo,invert=true); 
 
 module leg() {
     rotate([0, -10, 0])

@@ -1,7 +1,6 @@
 
 boostFrontAxelLength=110;
-
-
+baseThickness=6;
 
 difference() {
 
@@ -14,20 +13,27 @@ difference() {
     translate([0, boostFrontAxelLength/2 - 10, 25])
     cube([30, 20, 50], center=true);
 
-    // base y
-    cube([80, 150, 5], center=true);
-      
-    
+    // base shapes
+    union() {
+    //color([1,0,0])
+    cube([40, 220, baseThickness], center = true);
+
+    translate([0, 50, 0])
+    cube([80, 30, baseThickness], center=true);
+
+    translate([0, -50, 0])
+    cube([80, 30, baseThickness], center=true);
+    }
   }
 
   // slot cutout thingy
-  translate([0, 0, 35])
+  translate([0, 0, 42])
   rotate([90 ,0, 0])
   hull() {
     cylinder(h=boostFrontAxelLength+1, r=15.2/2, center=true);
 
     translate([0, 20, 0])
-    cylinder(h=boostFrontAxelLength+1, r=23/2, center=true);
+    cylinder(h=boostFrontAxelLength+1, r=27/2, center=true);
   }
 
   // left shoulder cutout

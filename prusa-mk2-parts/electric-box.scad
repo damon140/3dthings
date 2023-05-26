@@ -7,7 +7,7 @@ module insideBox() {
     // main shape
     translate([-1,0,0])
     cube([48,108,99]);
-    
+  
     // side shelf cutout
     translate([-3,0,78])
     cube([2,110,21]);
@@ -66,10 +66,18 @@ insideBox();
 // electric box
 translate([-25,-55,0]) { 
   difference() {
-    cube([52,112,96]);
-      
+    translate([-1, -1, 0])
+    cube([55,114,96]);
+    
     translate([4,1,1])
     insideBox();
   }
+  
+  // m3 5.8 width to make it stand point down
+  // 3mm to centre when point is down
+  
+  // FIXME: add m3 screw pocket 1
+  
+  // FIXME: add m3 screw pocket 1
+  
 }
-

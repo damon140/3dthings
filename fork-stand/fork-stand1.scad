@@ -1,6 +1,6 @@
 
-boostFrontAxelLength=110;
-baseThickness=6;
+boostFrontAxelLength=110-4;
+baseThickness=5;
 
 difference() {
 
@@ -15,14 +15,14 @@ difference() {
 
     // base shapes
     union() {
-    //color([1,0,0])
-    cube([40, 220, baseThickness], center = true);
-
-    translate([0, 50, 0])
-    cube([80, 30, baseThickness], center=true);
-
-    translate([0, -50, 0])
-    cube([80, 30, baseThickness], center=true);
+    color([1,0,0])
+    cube([25, 200, baseThickness], center = true);
+         
+    translate([0, 43, 0])
+    cube([80, 22, baseThickness], center=true);
+    
+    translate([0, -43, 0])
+    cube([80, 22, baseThickness], center=true);
     }
   }
 
@@ -46,8 +46,14 @@ difference() {
   rotate([-20])
   cube([32, 20, 50], center=true);
 
-  rotate([0,0, -90])
-  translate([-40, -30, 1.5])
-  linear_extrude(height=2)
-  text("mc standy", 13, "Arial");
+
+  translate([6, -29, 0])
+  rotate([0,0, -270])
+  linear_extrude(height=3.5)
+  text("mcforky", 12, "Arial");
+  
 }
+
+
+
+

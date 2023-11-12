@@ -59,6 +59,33 @@ module insideBox() {
   }
 };
 
+module screwPocket() {
+      
+  difference() {
+    translate([0, 0, -1])
+    cube([5, 10, 11]);
+    
+    // m3 5.8 width to make it stand point down
+    // 3mm to centre when point is down
+    translate([2, 2, 2.3])
+    cube([3.2, 6, 8]);
+      
+    // cut underhang 45 degree
+    translate([1, -1, -4])
+    color([1,0,1])
+    rotate([0, -45, 0])
+    translate([0, 0, -3])
+    cube([5, 12, 15]);  
+  
+    // rear bolt through hole
+    translate([-1, 5, 5])
+    rotate([0, 90, 0])
+    color([1,0,1])
+    cylinder(h=5, r1=1.7, r2=1.7);
+      
+  }
+};
+
 // box inside
 translate([90,0,0])
 insideBox();
@@ -73,11 +100,13 @@ translate([-25,-55,0]) {
     insideBox();
   }
   
-  // m3 5.8 width to make it stand point down
-  // 3mm to centre when point is down
   
-  // FIXME: add m3 screw pocket 1
+  // m3 screw pocket 1
+  translate([46, 51, 4.75])
+  screwPocket();
   
-  // FIXME: add m3 screw pocket 1
-  
+  // m3 screw pocket 2
+  translate([46, 51, 44.27])
+  screwPocket();
 }
+
